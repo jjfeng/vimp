@@ -76,7 +76,7 @@ run_sl <- function(Y, X, V, SL.library, univariate_SL.library, s, folds,
          folds <- .make_folds(Y, V = V, stratified = (length(unique(Y)) == 2))
          is_good = 1
          for (v in 1:V){
-             is_good <- is_good * length(unique(Y[folds == v])) > 0
+             is_good <- is_good * (length(unique(Y[folds == v])) > 0)
          }
      }
   }
